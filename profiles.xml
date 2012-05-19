@@ -36,15 +36,5 @@
 		   <suite.file>ui-end2end-suite.xml</suite.file>
         </properties>
     </profile>
- 
-<!--        <profile>-->
-<!--    	<id>all</id>-->
-<!--    	<activation>-->
-<!--    		<activeByDefault>true</activeByDefault>-->
-<!--        </activation>-->
-<!--        <properties>-->
-<!--		   <suite.file>ui-smoke-suite.xml</suite.file>-->
-<!--        </properties>-->
-<!--    </profile>-->
 </profiles></profilesXml>
 

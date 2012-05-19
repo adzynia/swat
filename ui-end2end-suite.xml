@@ -1,7 +1,7 @@
 <suite name="End-2-End-Suite">
   <test name="End-2-End-Suite-Scenarious">
     <packages>
-      <package name="com.mini" />
+      <package name="com.swat" />
    </packages>
  </test>
 </suite>
