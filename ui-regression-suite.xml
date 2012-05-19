@@ -1,0 +1,7 @@
+<suite name="UI-Regression-Suite">
+  <test name="UI-Regression-Tests">
+    <packages>
+      <package name="com.mini" />
+   </packages>
+ </test>
+</suite>

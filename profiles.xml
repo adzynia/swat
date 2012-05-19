@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<profilesXml><profiles>
+    <profile>
+        <id>smoke</id>
+        <activation>
+            <property>
+                <name>suite</name>
+                <value>smoke</value>
+            </property>
+        </activation>
+        <properties>
+		   <suite.file>ui-smoke-suite.xml</suite.file>
+        </properties>
+    </profile>
+    <profile>    
+        <id>regression</id>
+        <activation>
+            <property>
+                <name>suite</name>
+                <value>regression</value>
+            </property>
+        </activation>
+        <properties>
+		   <suite.file>ui-regression-suite.xml</suite.file>
+        </properties>
+    </profile>
+    <profile>
+    	<id>end2end</id>
+    	<activation>
+            <property>
+                <name>suite</name>
+                <value>end2end</value>
+            </property>
+        </activation>
+        <properties>
+		   <suite.file>ui-end2end-suite.xml</suite.file>
+        </properties>
+    </profile>
+ 
+<!--        <profile>-->
+<!--    	<id>all</id>-->
+<!--    	<activation>-->
+<!--    		<activeByDefault>true</activeByDefault>-->
+<!--        </activation>-->
+<!--        <properties>-->
+<!--		   <suite.file>ui-smoke-suite.xml</suite.file>-->
+<!--        </properties>-->
+<!--    </profile>-->
+</profiles></profilesXml>
+

@@ -1,0 +1,7 @@
+<suite name="UI-SMOKE-SUITE">
+  <test name="UI-SMOKE-Tests">
+    <packages>
+      <package name="com.mini" />
+   </packages>
+ </test>
+</suite>
