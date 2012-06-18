@@ -1,9 +1,10 @@
 package com.swat.staticdata;
 
 public enum PageTitle {
-
-	BOOK_HOME("Selenium: Beginners Guide"), //
-	EMPTY(""), ;
+	
+	EMPTY(""),//
+	ADMIN_LOGIN("Sign In First!"), //
+	ADMIN_HOME("Membership Management"), ;
 
 	private String titleValue;
 

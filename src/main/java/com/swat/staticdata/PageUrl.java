@@ -2,7 +2,8 @@ package com.swat.staticdata;
 
 public enum PageUrl  {
 
-	BOOK_HOME("http://book.theautomatedtester.co.uk/"), //
+	ADMIN_LOGIN("http://localhost/scrum/admin/pageLogin.php"), //
+	ADMIN_HOME("http://localhost/scrum/admin/pageHome.php"), //
 	;
 
 	private String urlValue;

@@ -29,7 +29,7 @@ import com.swat.containers.Table;
 import com.swat.staticdata.PageTitle;
 import com.swat.staticdata.PageUrl;
 
-public abstract class AbstractPage extends AbstractContainer {
+public abstract class BasePage extends AbstractContainer {
 
 	private final PageTitle title;
 	private final PageUrl pageUrl;
@@ -48,7 +48,7 @@ public abstract class AbstractPage extends AbstractContainer {
 	@Container
 	private Form form;
 
-	public AbstractPage(WebDriver driver, PageTitle title, PageUrl pageUrl) {
+	public BasePage(WebDriver driver, PageTitle title, PageUrl pageUrl) {
 		super(driver);
 		this.title = title;
 		this.pageUrl = pageUrl;
@@ -82,11 +82,11 @@ public abstract class AbstractPage extends AbstractContainer {
 		return title != null ? title.getTitleValue() : null;
 	}
 
-	public static <T extends AbstractPage> T create(WebDriver driver, Class<T> pageClass) {
+	public static <T extends BasePage> T create(WebDriver driver, Class<T> pageClass) {
 		return PageFactoryEx.init(driver, pageClass);
 	}
 
-	public static <T extends AbstractPage> T init(T page) {
+	public static <T extends BasePage> T init(T page) {
 		ElementLocatorFactory finder = new AjaxElementLocatorFactory(page.driver, Integer.parseInt(TestProperties.getTestProperty("wait.time.sec")));
 		PageFactoryEx.initWithFactory(finder, page.driver, page);
 		return page;

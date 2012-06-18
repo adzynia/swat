@@ -14,7 +14,7 @@ public class PageFactoryEx {
 		return initElements(new DefaultElementLocatorFactory(driver), driver, pageClassToProxy);
 	}
 
-	public static <T extends AbstractPage> void initWithFactory(ElementLocatorFactory factory, WebDriver driver, T page) {
+	public static <T extends BasePage> void initWithFactory(ElementLocatorFactory factory, WebDriver driver, T page) {
 		PageFactory.initElements(factory, page);
 		initContainers(factory, driver, page);
 	}
