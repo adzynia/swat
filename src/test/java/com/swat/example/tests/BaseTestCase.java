@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 
 import com.swat.TestProperties;
+import com.swat.WebDriverScreenshotListener;
 
 @Listeners({ WebDriverScreenshotListener.class })
 public abstract class BaseTestCase {
