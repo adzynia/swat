@@ -12,7 +12,7 @@
 
   	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<selenium-version>2.21.0</selenium-version>
+		<selenium-version>2.25.0</selenium-version>
 		<testng-version>6.4</testng-version>
 		<java-version>1.6</java-version>
 		<suite.file>ui-smoke-suite.xml</suite.file>

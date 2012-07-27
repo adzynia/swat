@@ -18,4 +18,9 @@ public class AdminAsserts {
 		assertTrue(steps.adminHomePage.isLoggedIn());
 	}
 
+	public void thatUserPresentInViewMembers(String memberName) {
+		steps.viewMembersPage.open();
+		assertTrue(steps.viewMembersPage.isMemberPresent(memberName));
+	}
+
 }

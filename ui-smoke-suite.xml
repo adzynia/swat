@@ -1,7 +1,7 @@
 <suite name="UI-SMOKE-SUITE">
   <test name="UI-SMOKE-Tests">
     <packages>
-      <package name="com.swat" />
+      <package name="com.swat.example.tests" />
    </packages>
  </test>
 </suite>

@@ -1,5 +1,8 @@
 package com.swat.example.tests;
 
+import java.util.Random;
+
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -11,7 +14,7 @@ public class AddMemberTest extends BaseTestCase {
 
 	private AdminSteps steps = new AdminSteps(getDriver());
 	private AdminAsserts asserts = new AdminAsserts(steps);
-	private UserData newMember = new UserData("user", "password");
+	private UserData newMember = new UserData("user" + new Random().nextInt(), "password");
 
 	@BeforeMethod(alwaysRun = true)
 	public void setup() {
@@ -23,6 +26,12 @@ public class AddMemberTest extends BaseTestCase {
 		steps.openAddNewMember();
 		steps.addMember(newMember);
 		asserts.thatEditUserPageOpened();
+		asserts.thatUserPresentInViewMembers(newMember.getName());
+	}
+	
+	@AfterMethod(alwaysRun = true)
+	public void tearDown() {
+		steps.removeMember(newMember.getName());
 	}
 	
 }
