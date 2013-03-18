@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.lang.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
@@ -162,7 +161,7 @@ public abstract class BasePage extends AbstractContainer {
 
 	public boolean isElementTextPresent(WebElement element, String text) {
 		try {
-			if (StringUtils.deleteWhitespace(element.getText()).equals(StringUtils.deleteWhitespace(text))) {
+			if (element.getText().equals(text)) {
 				return true;
 			}
 			return false;

@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.annotations.AfterSuite;
@@ -46,8 +47,13 @@ public abstract class BaseTestCase {
 			if ("firefox".equals(browser)) {
 				driver = new FirefoxDriver();
 				maximizeWindow();
-			} else {
+			}  
+			if ("chrome".equals(browser)) {
+				driver = new ChromeDriver();
+			} 
+			if ("htmlunit".equals(browser)) {
 				driver = new HtmlUnitDriver(true);
+				return driver;
 			}
 			driver.manage()
 					.timeouts()
