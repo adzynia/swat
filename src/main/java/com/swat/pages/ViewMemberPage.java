@@ -17,6 +17,8 @@ public class ViewMemberPage extends BasePage {
 	}
 
 	public boolean isMemberPresent(String memberName) {
+    driver.findElement(By.name("searchMembers")).sendKeys(memberName);
+    driver.findElement(By.xpath("//*[@value='Find']")).click();
 		return isElementPresent(By.xpath(String.format(CELL_MEMBER_NAME, memberName)));
 	}
 

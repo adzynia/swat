@@ -1,7 +1,9 @@
 package com.swat.example.tests;
 
+import java.io.IOException;
 import java.util.Random;
 
+import com.swat.HttpActions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,7 +18,7 @@ public class AddMemberTest extends BaseTestCase {
 	private AdminAsserts asserts = new AdminAsserts(steps);
 	private UserData newMember = new UserData("user" + new Random().nextInt(), "password");
 
-	@BeforeMethod(alwaysRun = true)
+  @BeforeMethod(alwaysRun = true)
 	public void setup() {
 		steps.login();
 	}
@@ -30,8 +32,8 @@ public class AddMemberTest extends BaseTestCase {
 	}
 	
 	@AfterMethod(alwaysRun = true)
-	public void tearDown() {
-		steps.removeMember(newMember.getName());
+	public void tearDown() throws IOException {
+    HttpActions.removeMember(newMember.getName());
 	}
 	
 }
