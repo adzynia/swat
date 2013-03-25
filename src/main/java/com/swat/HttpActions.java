@@ -69,7 +69,6 @@ public class HttpActions {
       httpClient = new DefaultHttpClient(cm);
     }
     return httpClient;
-
   }
 
   public static void main(String[] args) throws IOException {

@@ -43,6 +43,7 @@ public class AdminSteps extends BaseStep {
 
 	public void removeMember(String name) {
 		viewMembersPage.open();
+    viewMembersPage.searchMember(name);
 		viewMembersPage.clickDeleteMemberBy(name);
 		viewMembersPage.acceptConfirmation();
 	}

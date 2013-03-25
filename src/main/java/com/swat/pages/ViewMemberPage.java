@@ -17,12 +17,16 @@ public class ViewMemberPage extends BasePage {
 	}
 
 	public boolean isMemberPresent(String memberName) {
-    driver.findElement(By.name("searchMembers")).sendKeys(memberName);
-    driver.findElement(By.xpath("//*[@value='Find']")).click();
+    searchMember(memberName);
 		return isElementPresent(By.xpath(String.format(CELL_MEMBER_NAME, memberName)));
 	}
 
-	public void clickDeleteMemberBy(String name) {
+  public void searchMember(String memberName) {
+    driver.findElement(By.name("searchMembers")).sendKeys(memberName);
+    driver.findElement(By.xpath("//*[@value='Find']")).click();
+  }
+
+  public void clickDeleteMemberBy(String name) {
 		driver.findElement(
 				By.xpath(String.format(CELL_MEMBER_NAME + LINK_DELETE_MEMBER, name))).click();
 	}
